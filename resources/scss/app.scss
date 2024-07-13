@@ -1,12 +1,13 @@
+@use "partials/variables.scss" as *;
 @import "~bootstrap/scss/bootstrap";
+
 
 ul{
     list-style: none;
     font-size: 13px;
     li{
         display: inline-block;
-        margin-left: 18px;
-        margin-right: 18px;
+        margin: 0 18px;
     }
 }
 
@@ -17,6 +18,22 @@ a{
 }
 
 .headerActive{
-    border-bottom: 6px solid #0C7BEA;
-    color: #0C7BEA;
+    border-bottom: 6px solid $main-color;
+    color: $main-color;
+}
+
+.bg-main{
+    background-color: $main-color;
+}
+
+.cur-series{
+    position: absolute;
+    top: -25px;
+}
+
+#section-3{
+    font-size: 14px;
+    i{
+        font-size: 43px;
+    }
 }
