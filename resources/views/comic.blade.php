@@ -8,6 +8,22 @@
     <div>
         <img src="https://static.dc.com/2024-07/2024_07_11_Marquee_3x1.jpg?w=1200" alt="DC logo" class="w-100">
     </div>
+    <div id="section-2">
+        <div class="container position-relative pt-5">
+            <div class="bg-main text-light fw-bold fs-4 px-4 py-1 cur-series">CURRENT SERIES</div>
+            <div class="row">
+                @foreach ($comics as $comic )
+                    <div class="col-2 p-2">
+                        <figure>
+                            <img src="{{$comic->thumb}}" alt="">
+                        </figure>
+                    </div>
+    
+                @endforeach
+            </div>
+        </div>
+    </div>
+
     <div class="bg-main py-5" id="section-3">
         <div class="container text-light">
             <div class="row">

@@ -14,7 +14,6 @@ class ComicsSeeder extends Seeder
     public function run(): void
     {
         $data=config('comics');
-
         foreach($data as $comic_db){
             $comic=new Comic();
 
