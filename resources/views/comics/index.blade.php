@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('page-title')
-    Home
+    Comics
 @endsection
 
 @section('main')
@@ -14,9 +14,11 @@
             <div class="row">
                 @foreach ($comics as $comic )
                     <div class="col-2 p-2">
-                        <figure>
-                            <img src="{{$comic->thumb}}" alt="">
-                        </figure>
+                        <a href="{{route('comics.show',$comic->id)}}">
+                            <figure>
+                                <img src="{{$comic->thumb}}" alt="">
+                            </figure>
+                        </a>
                     </div>
     
                 @endforeach

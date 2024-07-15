@@ -7,7 +7,7 @@
             <div class="col-9 fw-bold text-end" >
                 <ul class="m-0">
                     <li><a href="#" class="listLink">CHARACTERS</a></li>
-                    <li><a href="#" class="listLink">COMICS</a></li>
+                    <li><a href="{{route('comics.index')}}" class="listLink">COMICS</a></li>
                     <li><a href="#" class="listLink">MOVIES</a></li>
                     <li><a href="#" class="listLink">TV</a></li>
                     <li><a href="#" class="listLink">GAMES</a></li>
