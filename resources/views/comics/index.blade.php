@@ -13,11 +13,14 @@
             <div class="bg-main text-light fw-bold fs-4 px-4 py-1 cur-series">CURRENT SERIES</div>
             <div class="row">
                 @foreach ($comics as $comic )
-                    <div class="col-2 p-2">
+                    <div class="col-2 p-4">
                         <a href="{{route('comics.show',$comic->id)}}">
                             <figure>
                                 <img src="{{$comic->thumb}}" alt="">
                             </figure>
+                            <div class="text-light fw-semibold">
+                                {{$comic->title}}
+                            </div>
                         </a>
                     </div>
     

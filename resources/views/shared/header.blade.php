@@ -4,7 +4,7 @@
             <div class="col-3 py-4">
                 <img src="{{ Vite::asset('resources/img/DC_Comics_logo.svg.png') }}" alt="DC logo" width="80px">
             </div>
-            <div class="col-9 fw-bold text-end" >
+            <div class="col-9 fw-bold text-end">
                 <ul class="m-0">
                     <li><a href="#" class="listLink">CHARACTERS</a></li>
                     <li><a href="{{route('comics.index')}}" class="listLink">COMICS</a></li>
