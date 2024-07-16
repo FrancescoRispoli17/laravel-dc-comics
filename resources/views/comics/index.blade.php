@@ -4,6 +4,10 @@
     Comics
 @endsection
 
+@section('active')
+    headerActive
+@endsection
+
 @section('main')
     <div>
         <img src="https://static.dc.com/2024-07/2024_07_11_Marquee_3x1.jpg?w=1200" alt="DC logo" class="w-100">

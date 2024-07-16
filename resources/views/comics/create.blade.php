@@ -7,37 +7,86 @@
 @section('main')
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col">   
                 <form action="{{ route('comics.store') }}" method="POST">
                     @csrf
                     
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="title">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="title" value="{{ old('title') }}">
+                        @if ($errors->get('title'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('title') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description">{{ old('description') }}</textarea>
+                        @if ($errors->get('description'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('description') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">thumb</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="thumb">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="thumb" value="{{ old('thumb') }}">
+                        @if ($errors->get('description'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('description') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">price</label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" name="price">
+                        <input type="number" class="form-control" id="exampleFormControlInput1" name="price" value="{{ old('price') }}">
+                        @if ($errors->get('price'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('price') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">series</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="series">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="series" value="{{ old('series') }}">
+                        @if ($errors->get('series'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('series') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">sale date</label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1" name="sale_date">
+                        <input type="date" class="form-control" id="exampleFormControlInput1" name="sale_date" value="{{ old('sale_date') }}">
+                        @if ($errors->get('sale_date'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('sale_date') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">type</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name="type">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="type" value="{{ old('type') }}">
+                        @if ($errors->get('type'))
+                            <div class="alert alert-danger mt-2">
+                                @foreach ($errors->get('type') as $error )
+                                    {{ $error }}
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
                     <button type="submit" class="btn btn-primary">Crea</button>
                 </form>
