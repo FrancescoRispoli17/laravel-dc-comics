@@ -8,7 +8,7 @@
     <div class="container pt-4" id="show-page">
         <div class="row">
             <div class="col-auto">
-                <img src="{{$comic->thumb}}" alt="$comic->title" width="500px">
+                <img src="{{$comic->thumb}}" alt="{{$comic->title}}" width="500px">
             </div>
             <div class="col">
                 <div class="fw-bold text-uppercase text-second">{{$comic->type}}</div>
