@@ -10,4 +10,8 @@ class Comic extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function artists(){
+        return $this->belongsToMany(Artist::class, 'comic_artist');
+    }
 }

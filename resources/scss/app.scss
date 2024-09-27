@@ -16,15 +16,21 @@
 }
 
 figure{
-    width: 180px;
-    height: 180px;
+    width: 260px;
+    height: 260px;
     overflow: hidden;
     img{
         width: 100%;
         object-fit: cover;
     }
 }
+.comic-card{
+    max-width: 260px;
+}
 
 #section-2{
-    background-color: #1C1C1C;
+    background-color: white;
+    .col-auto{
+        border: 1px solid rgb(211, 205, 205);
+    }
 }

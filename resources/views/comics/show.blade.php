@@ -14,6 +14,9 @@
                 <div class="fw-bold text-uppercase text-second">{{$comic->type}}</div>
                 <div class="h1 display-4 mt-3 fw-bold lh-1 mb-4 text-uppercase">{{$comic->title}}</div>
                 <p class="fw-bold text-second">{{$comic->description}}</p>
+                @foreach ($comic->artists as $artist)
+                    <p>{{$artist->name}}</p>
+                @endforeach
 
                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                     @csrf

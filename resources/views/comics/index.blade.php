@@ -14,16 +14,19 @@
     </div>
     <div id="section-2">
         <div class="container position-relative pt-5">
-            <div class="bg-main text-light fw-bold fs-4 px-4 py-1 cur-series">CURRENT SERIES</div>
+            <div class="bg-main fw-bold fs-4 px-4 py-1 cur-series">CURRENT SERIES</div>
             <div class="row">
                 @foreach ($comics as $comic )
-                    <div class="col-2 p-4">
+                    <div class="col-auto p-4">
                         <a href="{{route('comics.show',$comic->id)}}">
                             <figure>
                                 <img src="{{$comic->thumb}}" alt="">
                             </figure>
-                            <div class="text-light fw-semibold">
-                                {{$comic->title}}
+                            <div class="text-dark fw-semibold comic-card text-center">
+                                <p class="m-0 fs-5">{{$comic->title}}</p>
+                                <small class="fw-light">{{$comic->type}}</small>
+                                <p class="fs-6 text-secondary fw-light">{{$comic->sale_date}}</p>
+                                <p class="mt-4 mb-0 fs-5">${{$comic->price}}</p>
                             </div>
                         </a>
                     </div>
