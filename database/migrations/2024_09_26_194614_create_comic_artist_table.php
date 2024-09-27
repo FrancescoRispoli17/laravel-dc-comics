@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('comic_artist', function (Blueprint $table) {
             $table->id();
             $table->foreignId('comic_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('artists_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('artist_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

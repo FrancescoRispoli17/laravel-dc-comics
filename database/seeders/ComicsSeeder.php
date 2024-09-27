@@ -24,6 +24,8 @@ class ComicsSeeder extends Seeder
             $comic->price=$comic_db['price'];
             $comic->sale_date=$comic_db['sale_date'];
             $comic->type=$comic_db['type'];
+            $comic->page=$comic_db['page'];
+            $comic->size=$comic_db['size'];
             $comic->save();
         }
     }

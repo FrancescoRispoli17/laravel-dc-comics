@@ -21,10 +21,13 @@ class ArtistsSeeder extends Seeder
         foreach($data as $comic_db){
 
             foreach($comic_db['artists'] as $artist_db){
-                $artist=new Artist();
-                $artist->name=$artist_db;
-                $artist->description='';
-                $artist->save();
+                if(!Artist::where('name',$artist_db)->exists()){
+
+                    $artist=new Artist();
+                    $artist->name=$artist_db;
+                    $artist->description='';
+                    $artist->save();
+                }
             }
         }
 

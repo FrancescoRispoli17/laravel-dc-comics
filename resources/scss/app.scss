@@ -3,7 +3,7 @@
 @use "partials/common.scss" as *;
 @import "~bootstrap/scss/bootstrap";
 
-.cur-series{
+.consigliati{
     position: absolute;
     top: -25px;
 }
@@ -26,6 +26,7 @@ figure{
 }
 .comic-card{
     max-width: 260px;
+    height: 150px;
 }
 
 #section-2{

@@ -14,7 +14,7 @@
     </div>
     <div id="section-2">
         <div class="container position-relative pt-5">
-            <div class="bg-main fw-bold fs-4 px-4 py-1 cur-series">CURRENT SERIES</div>
+            <div class="bg-main fw-bold fs-4 px-4 py-1 consigliati">CONSIGLIATI</div>
             <div class="row">
                 @foreach ($comics as $comic )
                     <div class="col-auto p-4">
@@ -22,15 +22,14 @@
                             <figure>
                                 <img src="{{$comic->thumb}}" alt="">
                             </figure>
-                            <div class="text-dark fw-semibold comic-card text-center">
-                                <p class="m-0 fs-5">{{$comic->title}}</p>
-                                <small class="fw-light">{{$comic->type}}</small>
-                                <p class="fs-6 text-secondary fw-light">{{$comic->sale_date}}</p>
-                                <p class="mt-4 mb-0 fs-5">${{$comic->price}}</p>
+                            <div class="text-dark fw-semibold comic-card d-flex text-center flex-column">
+                                <div class="m-0 fs-5">{{$comic->title}}</div>
+                                <div><small class="fw-light">{{$comic->type}}</small></div>
+                                <div class="fs-6 text-secondary fw-light">{{$comic->sale_date}}</div>
+                                <div class="mt-auto fs-5">${{$comic->price}}</div>
                             </div>
                         </a>
                     </div>
-    
                 @endforeach
             </div>
         </div>

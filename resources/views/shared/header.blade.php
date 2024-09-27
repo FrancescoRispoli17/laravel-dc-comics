@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-3 py-4">
-                <img src="{{ Vite::asset('resources/img/DC_Comics_logo.svg.png') }}" alt="DC logo" width="80px">
+                <a href="/"><img src="{{ Vite::asset('resources/img/DC_Comics_logo.svg.png') }}" alt="DC logo" width="80px"></a>
             </div>
             <div class="col-9 fw-bold text-end">
                 <ul class="m-0">

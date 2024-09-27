@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('thumb',350);
             $table->float('price');
             $table->dateTime('sale_date', $precision = 0);
-            $table->string('type',20);
+            $table->string('type',30);
+            $table->integer('page');
+            $table->string('size',20);
             $table->timestamps();
         });
     }
